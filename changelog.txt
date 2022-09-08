@@ -1,0 +1,28 @@
+---2015.09.13---------------------------------------------------------------------------------------------------------------
+- FIX: Incident mID detection
+- Register incident with Immovable or another car only.
+---2015.09.12---------------------------------------------------------------------------------------------------------------
+- Incidents detection, and show in automatic replay:
+ -- lowinc, highinc parameters (see install.txt for details)
+---2015.09.04---------------------------------------------------------------------------------------------------------------
+- FIX: Showinpit when pitin state 2 or 4 (entering or exiting)
+---2015.08.18---------------------------------------------------------------------------------------------------------------
+- Rearview camera
+- Changeable rearview and onboard camera number (type) in ini file
+- camera test option in ini file
+- new showinpit option (top <number>)
+---2015.08.01---------------------------------------------------------------------------------------------------------------
+- Side by side detection on race. Camera change when more than 2 car side by side on the track.
+- Hotkey to on/off auto camera.
+- auto parameter in file only read when plugin started.
+- "Entering the pit" detection. (see showinpit parameter in install.txt)
+- Circling on formation lap and finished race (see walkthrough parameter in install.txt)
+
+---First release-------------------------------------------------------------------------------------------------------------
+- On Practice/Qualifying: switch camera to best lap on track. Higher place, higher priority.
+- On race:
+ -- switch camera to the closest battle.
+ -- Higher place, higher priority.
+ -- Random mode, when everyone far away from each other (interrestdiff parameter)
+ -- Change onboard when close gap (onboarddiff parameter)
+ -- Higher priority places on race (interest parameter)

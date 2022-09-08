@@ -1,0 +1,62 @@
+Installation:
+Unzip dll to bin64\plugins folder.
+
+Recomended set instant replay to maximum (180 seconds).
+Replay not corretly working offline.
+Incident detection using mResultStream... not working together GTRtvPlugin (and another plugin using mResultStream). I have no idea how to resolve this.
+
+Ini file created by first run UserData\player\rF2autocam.ini. Parameters default settings:
+auto=1
+autokey=0x41
+waitsec=15
+interest=12
+interestdiff=3
+onboarddiff=0.4
+walkthrough=1
+onboardcam=0
+rearview=0
+rearviewcam=6
+camtest=no
+showinpit=interestdiff
+lowinc=0.4
+highinc=0.8
+
+Parameters:
+- auto: auto camera change on/off on start (0->off, 1->on)
+- waitsec: minimum wait between camera change (some randomization greater than this max +5sec)
+- interest: top places with priority (default 12 -> 1-12 places higher priority)
+- interestdiff: interesting gap (in seconds) if everyone out of this gap camera mode change to random mode
+- onboarddiff: close gap (in sec) when gap is closest, 20% chance to change onboard
+- autokey: auto mode on/off hotkey keykode (default 0x41-> ctrl+a)
+- walkthrough:
+ -- 0 -> off
+ -- 1 -> camera "walk through" between cars on formation lap, and walk through first 3 when race finished and everyone finished.
+- showinpit:
+ -- never -> off
+ -- always -> always show when anyone entering the pit
+ -- interestdiff -> show when anyone entering the pit, when every gap out of interestdiff time
+ -- onboarddiff -> show when anyone entering the pit, when every gap out of onboarddiff time 
+ -- any number (integer) -> show always when the top <number> driver make pit stop
+- onboardcam -> onboard camera type (number)
+- rearview -> percent (0-100 integer only). Chance to change defenders rearview instead onboard
+- rearviewcam -> rearview camera type (number)
+- camtest: testing onboard or rearview camera
+ -- no -> no testing. normal operation
+ -- ob -> testing onboard camera. camera type always onboardcam
+ -- rv -> testing rearview camera. camera type always rearviewcam
+- lowinc -> 0.0-1.0 low incidents show in (replay) practices/quialifying everytime. Show race when everione out of close gap (out of onboarddiff).
+- highinc -> 0.0-1.0 high indidents show everytime every session (replay)
+ -- When lowinc and highinc parameters higher than 1.0, incident decetion off.
+ -- Show incident with another vehicle or Immovable.
+ 
+ Camera types
+    0  = TV cockpit
+    1  = cockpit
+    2  = nosecam
+    3  = swingman
+    5  = onboard000
+    4  = trackside (nearest)
+       :
+       :
+ 1004  = onboard999
+ 1005+ = (currently unsupported, in the future may be able to set/get specific trackside camera)
