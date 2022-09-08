@@ -270,10 +270,10 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Source\Example.cpp" />
+    <ClCompile Include="..\Source\rf2autocam.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Include\Example.hpp" />
+    <ClInclude Include="..\Include\rf2autocam.hpp" />
     <ClInclude Include="..\Include\InternalsPlugin.hpp" />
     <ClInclude Include="..\Include\PluginObjects.hpp" />
   </ItemGroup>
